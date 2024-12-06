@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <!-- Page Title -->
+    <title>COLD</title>
+    <!--/ Page Title -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+    <link href="css/plugins.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="img/bwob/bwobAv.png">
+    <link rel="apple-touch-icon" href="img/bwob/bwobAv.png">
+    <!--/ Favicons -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+    <style>
+        .lilita-one-regular {
+            font-family: "Lilita One", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .indie-flower-regular {
+            font-family: "Indie Flower", cursive;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+
+        .cedarville-cursive-regular {
+            font-family: "Cedarville Cursive", cursive;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+
+
+        #bwobTaxi {
+            position: absolute;
+            -webkit-animation: linear infinite;
+            -webkit-animation-name: run;
+            -webkit-animation-duration: 5s;
+        }
+
+        @-webkit-keyframes run {
+            0% {
+                left: 0;
+            }
+
+            48% {
+                -webkit-transform: rotateY(0deg);
+            }
+
+            50% {
+                left: calc(100% - 100px);
+                -webkit-transform: rotateY(180deg);
+            }
+
+            98% {
+                -webkit-transform: rotateY(180deg);
+            }
+
+            100% {
+                left: 0;
+                -webkit-transform: rotateY(0deg);
+            }
+        }
+    </style>
+</head>
+
+<body class="light" data-barba="wrapper">
+
+    <!-- Page Loader -->
+    <div class="page-loader blocks down">
+
+        <!-- Logo -->
+        <div class="page-loader-logo" style="margin-bottom:30px;">
+
+            <img src="img/bwob/bwobAv.png" />
+
+        </div>
+        <!-- Logo -->
+        <!-- Caption -->
+        <div class="page-loader-caption lilita-one-regular" style="margin-top:65px;">
+
+            WELCOME TO BWOB WORLD
+        </div>
+        <!-- Caption -->
+
+    </div>
+    <!--/ Page Loader -->
+
+    <!-- Page Transitions -->
+    <div class="nayla-page-transition block down capt-bottom-left offset-x">
+        <!-- Caption -->
+        <div class="page-transition-caption lilita-one-regular ">LOADING NEXT LAND...</div>
+        <!--/ Caption -->
+
+    </div>
+    <!-- Page Transitions -->
+
+    <!-- Mouse Cursor -->
+    <div id="mouseCursor" class="dot"> </div>
+    <!--/ Mouse Cursor -->
+
+    <!-- Page -->
+    <div id="page">
+
+        <div class="menu-overlay"></div>
+
+        <!-- Site Header -->
+        <div id="header" class="site-header fixed light blend">
+
+            <div class="header-wrapper wrapper-full">
+
+                <div class="c-col-4">
+
+                    <div class="nayla-button" data-icon="arrow_forward">
+
+                        <a href="ttlink" target="_blank">X/TWITTER</a>
+
+                    </div>
+
+                </div>
+
+                <div class="c-col-4 align-center">
+
+                    <div class="nayla-button" data-icon="arrow_forward">
+                        <div style="text-align:right; margin-bottom: 10px;  margin-right: 10px;">
+                            <div id="play" style=" cursor:pointer; float:right"><img src="img/bwob/play.png" /></div>
+                            <div id="pause" style="display:none; cursor:pointer; float:right"><img
+                                    src="img/bwob/pause.png" /></div>
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+                <div class="c-col-4 align-right">
+
+                    <div class="nayla-button" data-icon="arrow_forward">
+
+                        <a href="tglink" target="_blank">TELEGRAM </a>
+
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+        <!--/ Site Header -->
+
+        <!-- Main -->
+        <main id="primary" class="site-main" data-barba="container">
+
+            <!-- Page Content -->
+            <div id="content" class="page-content">
+
+                <div class="section fullscreen light" style="padding-top: 75px">
+
+                    <div class="section-background">
+
+                        <!-- Video -->
+                        <div class="nayla-video n-vimeo no-interactions hide-desktop" data-controls="false"
+                            data-autoplay=true data-muted=true data-loop=true>
+
+                            <video playsinline autoplay muted loop class="n-video ">
+                                <source src="img/bwob/bwobVidMobile.mp4">
+                            </video>
+
+                        </div>
+                        <!--/ Video -->
+
+                        <!-- Video -->
+                        <div class="nayla-video n-vimeo no-interactions hide-mobile" data-controls="false"
+                            data-autoplay=true data-muted=true data-loop=true>
+
+
+
+                            <video autoplay muted loop class="n-video " style="height: 100%!important;">
+                                <source src="img/bwob/bwobVid.mp4">
+                            </video>
+                        </div>
+                        <!--/ Video -->
+
+
+
+
+
+
+                    </div>
+                    <div class="wrapper-full blend">
+
+                        <div class="c-col-12">
+
+                            <!-- Text -->
+                            <div class="text-wrapper blend mobile-align-center">
+
+                                <p class="md-title has-anim-text charsLeft lilita-one-regular"
+                                    style="--mobileFontSize: 100px">COLD
+                                    <br />
+                                <div style="font-size:30px;letter-spacing:0;width:350px;display:none;"
+                                    class="indie-flower-regular">Pushed through fear; and found fortune</div>
+                                </p>
+
+                            </div>
+                            <!--/ Text -->
+
+                        </div>
+
+                        <div class="c-col-4 sm-12 align-bottom mobile-align-center blend mobile-padd" id="bwobCaro"
+                            style="display:none">
+
+
+                            <div class="project-button">
+
+                                <a href="#sec1">
+
+                                    <!-- Nayla Circular Text -->
+                                    <div class="nayla-circular-text counter-clockwise " data-height="200"
+                                        data-duration=13 data-seperator="circle" data-icon="arrow_downward">
+
+                                        <!-- Circle Text -->
+                                        <h3 class="circle-text">Buy,Believe,COLD</h3>
+
+                                    </div>
+                                    <!--/Nayla Circular Text -->
+
+
+                                </a>
+
+                            </div>
+                            <!--/ Project Button -->
+
+
+
+                        </div>
+
+                        <div class="c-col-8 sm-12 align-bottom">
+
+                            <!-- Text -->
+                            <div class="text-wrapper align-right blend mobile-align-center">
+
+                                <p class="md-title has-anim-text charsLeft" style="--mobileFontSize: 60px" data-delay=1>
+                                </p>
+
+                            </div>
+                            <!--/ Text -->
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="section" id="sec1" style="padding-top: 50px">
+
+
+                    <div class="wrapper-full">
+
+                        <div class="c-col-12">
+
+                            <!-- Marquee -->
+                            <div class="nayla-marquee right-to-left" data-duration="13" data-seperator="remove">
+
+                                <p class="text-h1 lilita-one-regular"> $COLD </p>
+
+                            </div>
+                            <!--/ Marquee -->
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="wrapper">
+
+                        <div class="c-col-3 sm-12">
+
+                            <!-- Text -->
+                            <div class="text-wrapper">
+
+                                <p class="text-h6">Hello <span class="text-h5">👋</span> <br>from <strong>COLD</strong>
+                                </p>
+
+                            </div>
+                            <!--/ Text -->
+
+                        </div>
+
+                        <div class="c-col-6 sm-12">
+
+                            <!-- Text -->
+                            <div class="text-wrapper">
+
+                                <p class="text-h6"><strong>$COLD</strong> always had trouble belonging because he didn’t
+                                    have a shape of his own. That’s until he realized that he could be whatever he
+                                    wanted! He could join anyone on any adventure, fill any role! COLD is for everyone
+                                    and is now spreading his wisdom and fortune to all.
+                                    <br>
+
+                                </p>
+
+                            </div>
+                            <!--/ Text -->
+
+                            <!-- Empty Space -->
+                            <span class="empty-space" style="height: 75px"></span>
+                            <!--/ Empty Space -->
+
+                            <!-- Button -->
+                            <div class="nayla-button underline icon-right text-h6" data-icon="arrow_outward">
+
+                                <a href="tglink">Join the community</a>
+
+                            </div>
+                            <!--/ Button -->
+
+                            <!-- Empty Space -->
+                            <span class="empty-space" style="height: 15px"></span>
+                            <!--/ Empty Space -->
+
+                            <!-- Single Image -->
+                            <div class="single-image hide-mobile" style="margin-bottom:240px">
+
+                                <img id="bwobTaxi" alt="Single Image" style="width:50%" src="img/bwob/bwobTaxiT.png">
+
+                            </div>
+
+                            <div class="single-image hide-desktop" style="margin-bottom:240px">
+
+                                <img id="bwobTaxi" alt="Single Image" style="width:70%" src="img/bwob/bwobTaxiT.png">
+
+                            </div>
+                            <!--/ Single Image -->
+
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="wrapper-full no-margin">
+
+                        <div class="c-col-12">
+
+                            <!-- Text -->
+                            <div class="text-wrapper">
+
+                                <p class="text-h1 has-anim-text wordsJustifyExpand"
+                                    style="text-align:center; margin-bottom:0; margin-top:10px" data-scrub=true>
+                                    🟦
+                                    <a href="ttlink"  target="_blank">
+                                        <i class="fa-brands fa-twitter"></i>
+                                    </a>
+                                    <a href="dexlink" target="_blank">
+                                        <img src="/dexscreener-b.png" style="max-width: 90px;" alt="" srcset="">
+                                    </a>
+                                    <a href="tglink" target="_blank">
+                                        <i class="fa-brands fa-telegram"></i>
+                                    </a>
+                                
+                                    🟦
+                                </p>
+
+                            </div>
+                            <!--/ Text -->
+
+                        </div>
+
+                    </div>
+
+
+
+                </div>
+
+
+
+                <div id="animPin" class="section fullscreen">
+
+                    <div class="section-background">
+
+                        <div class="single-image hide-desktop" style="--mobileHeight:unset!important;">
+
+                            <img alt="Single Image " style="--mobileHeight:unset!important;"
+                                src="/cold-01a.jpg">
+
+                        </div>
+
+                        <div class="single-image hide-mobile">
+
+                            <img alt="Single Image" src="/cold-01a.jpg">
+
+                        </div>
+
+                    </div>
+
+                    <div class="wrapper">
+
+                        <div class="c-col-9 sm-12 col-center self-center" style="text-align: center;">
+
+
+                            <!-- Text -->
+                            <div class="text-wrapper align-center">
+
+                                <p class="text-h4 charsFadeOn has-anim-text mask lilita-one-regular" data-pin=true
+                                    data-trigger="#animPin" style="color: #fff; font-size:40px">
+                                    $COLD <br />IS THE </br><span style="color:#7bff32">SUPERCYCLE </span><br />DON'T
+                                    SLEEP<br />
+                                    <img alt="Single Image" class="hide-desktop"
+                                        style="width:30%; opacity:.6; margin:0 auto;" src="img/bwob/scrolld2.gif" />
+                                    <img alt="Single Image" class="hide-mobile" style="width:10%; opacity:.6;"
+                                        src="img/bwob/scrolld2.gif" />
+                                </p>
+
+
+
+                            </div>
+                            <!--/ Text -->
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Main -->
+                <div id="primarydos" class="site-main project-page dark" data-barba="container"
+                    data-barba-namespace="project-image-gallery-horizontal">
+
+
+                    <!-- Project Header -->
+                    <div class="project-page-header fullscreen image-gallery horizontal light"
+                        style="background: #191919">
+
+                        <div class="wrapper">
+
+                            <!-- Project Hero -->
+                            <div class="project-hero">
+
+                                <!-- Project Title -->
+                                <div class="project-title">
+
+                                    <h1 class="md-title has-anim-text wordsUp no-revert lilita-one-regular"
+                                        style="font-size:65px;" data-stagger=0.1>
+                                        <span style="color:#1b91f4">$</span>COLD &nbsp;<br />ARTWORK
+                                        <br><span style="font-size:45px;">🎨 🖼️ 🖌️</span>
+                                    </h1>
+
+                                </div>
+                                <!--/Project Title -->
+
+                                <!-- Project Category -->
+                                <div class=" text-h6 has-anim-text wordsUp"
+                                    style="opacity: 1 !important; font-style:italic">(Original Artwork by Artist)</div>
+                                <!--/Project Cateogry -->
+
+                                <!-- Project Meta -->
+                                <div class="project-meta">
+
+                                    <!-- Text Wrapper -->
+                                    <div class="text-wrapper">
+
+                                        <p class="has-anim-text linesUp" style="opacity: 1 !important;"></p>
+
+                                    </div>
+                                    <!--/Text Wrapper -->
+
+                                    <!-- Text Wrapper -->
+                                    <div class="text-wrapper">
+
+                                        <p class="has-anim-text linesUp" style="opacity: 1 !important;"> </p>
+
+                                    </div>
+                                    <!--/Text Wrapper -->
+
+                                </div>
+                                <!--/Project Meta -->
+
+                                <!-- Project Slide Button -->
+                                <img alt="Single Image" class="hide-mobile" style="width:20%; opacity:.6"
+                                    src="img/bwob/scrolld2.gif" />
+                                <img alt="Single Image" class="hide-desktop"
+                                    style="width:60%; opacity:.6; position:absolute; bottom:0"
+                                    src="img/bwob/scrolld2.gif" />
+
+                                <div class="project-slide-button has-anim fadeRight">
+
+                                    <span class="material-icons" style="opacity: 1 !important;">
+
+                                    </span>
+
+                                </div>
+                                <!--/Project Slide Button -->
+
+                            </div>
+                            <!--/Project Hero -->
+
+                            <!-- Project Images -->
+                            <div class="project-images cursor-text" data-cursor-text="SCROLL" data-speed="15">
+
+                                <!-- Project Images Slider -->
+                                <div class="project-images-slider">
+
+                                    <!-- Project Image -->
+                                    <div class="project-image featured">
+
+                                        <img src="img/bwob/bwobBull.jpg" alt="Bullish">
+
+                                    </div>
+                                    <!--/Project Image -->
+
+                                    <!-- Project Image -->
+                                    <div class="project-image">
+
+                                        <img src="img/bwob/bwobGoku.jpg" alt="Goku + COLD">
+
+                                    </div>
+                                    <!--/Project Image -->
+
+                                    <!-- Project Image -->
+                                    <div class="project-image">
+
+                                        <img src="img/bwob/bwobMoon.jpg" alt="Mooning">
+
+                                    </div>
+                                    <!--/Project Image -->
+
+                                    <!-- Project Image -->
+                                    <div class="project-image">
+
+                                        <img src="img/bwob/bwobTree.jpg" alt="COLD TREE">
+
+                                    </div>
+                                    <!--/Project Image -->
+
+                                    <!-- Project Image -->
+                                    <div class="project-image">
+
+                                        <img src="img/bwob/bwobPicc.jpg" alt="Piccolo + COLD">
+
+                                    </div>
+                                    <!--/Project Image -->
+
+                                    <!-- Project Image -->
+                                    <div class="project-image">
+
+                                        <img src="img/bwob/bwobFridge.jpg" alt="COLD hunting">
+
+                                    </div>
+                                    <!--/Project Image -->
+
+                                    <!-- Project Image -->
+                                    <div class="project-image">
+
+                                        <img src="img/bwob/bwobMany.jpg" alt="Many BWOB">
+
+                                    </div>
+                                    <!--/Project Image -->
+
+                                    <!-- Project Image -->
+                                    <div class="project-image">
+
+                                        <img src="img/bwob/bwobGokujr.jpg" alt="Jr + COLD">
+
+                                    </div>
+                                    <!--/Project Image -->
+
+                                    <div class="project-image">
+
+                                        <img src="img/bwob/bwobStore.jpg" alt="COLD SHOPS">
+
+                                    </div>
+                                    <!--/Project Image -->
+
+                                    <div class="project-image">
+
+                                        <img src="img/bwob/bwobOp.jpg" alt="COLD ON ONE PIECE">
+
+                                    </div>
+                                    <!--/Project Image -->
+
+                                    <div class="project-image">
+
+                                        <img src="img/bwob/bwobCave.jpg" alt="COLD Mines">
+
+                                    </div>
+                                    <!--/Project Image -->
+
+
+                                </div>
+                                <!--/Project Image Slider -->
+
+                            </div>
+                            <!--/Project Images -->
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!--/ Page Content -->
+
+        </main>
+        <!--/ Main  -->
+
+
+        <!-- Footer -->
+        <div id="footer" class="site-footer">
+
+            <div class="footer-wrapper">
+
+                <!-- Footer Top -->
+                <div class="wrapper footer-top-wrapper">
+
+                    <div class="c-col-3 sm-12">
+
+                        <!-- Text -->
+                        <div class="text-wrapper">
+
+                            <p class="text-h6">Join the community &
+                                <br>build with <Strong>COLD</Strong>.
+                            </p>
+
+                        </div>
+                        <!--/ Text -->
+
+                    </div>
+
+                    <!-- Empty Column (For spacing) -->
+                    <div class="c-col-3 hide-mobile"></div>
+                    <!--/ Empty Column (For spacing) -->
+
+                    <div class="c-col-3 sm-12">
+
+                        <!-- Text -->
+                        <div class="text-wrapper">
+
+                            <p class="text-h6">Get latest updates and <span style="font-style: italic;">vibe</span> with
+                                us in TG.
+                            </p>
+
+                        </div>
+                        <!--/ Text -->
+
+                    </div>
+
+                    <div class="c-col-6 sm-12">
+
+                        <!-- Empty Space -->
+                        <span class="empty-space hide-mobile" style="height: 35px"></span>
+                        <!--/ Empty Space -->
+
+                        <!-- Button -->
+                        <div class="nayla-button underline icon-right justify-text text-h1" data-icon="arrow_outward">
+
+                            <a href="dexlink" target="_blank" class="lilita-one-regular">GET <span
+                                    style="color:#1e94f3">COLD'IN</span></a>
+
+                        </div>
+                        <!--/ Button -->
+
+
+                    </div>
+                    <div class="c-col-6 sm-12">
+
+                        <!-- Empty Space -->
+                        <span class="empty-space hide-mobile" style="height: 35px"></span>
+                        <!--/ Empty Space -->
+
+                        <!-- Button -->
+                        <!-- Image -->
+                        <div class="single-project-image" style="text-align:center">
+                            <img alt="Single Image" class="hide-mobile" style="width:45%" src="img/bwob/bwobing.gif">
+                            <img alt="Single Image" class="hide-desktop" style="width:65%" src="img/bwob/bwobing.gif">
+                        </div>
+                        <!--/ Image -->
+                        <!--/ Button -->
+
+                    </div>
+
+
+
+                </div>
+
+                <!-- Footer Bottom -->
+                <div class="wrapper footer-bottom-wrapper">
+
+                    <div class="c-col-3">
+                        <span
+                            style="font-size:11px; color:#5e5e5e; font-style: italic;"><strong>wJKaQEDxnBXwj4RCqNKE3K8NZaG992bZYnottcupump</strong></span><br /><br />
+                        <!-- Text -->
+                        <div class="text-wrapper">
+
+                            <p class="text-h6">© 2024 </p>
+
+                        </div>
+                        <!--/ Text -->
+
+                    </div>
+
+                    <div class="c-col-6 sm-12">
+
+                        <!-- Menu (Horizontal) -->
+                        <ul class="menu horizontal text-h6">
+
+                            <li><a href="ttlink" target="_blank">X</a></li>
+                            <li><a href="tglink" target="_blank">TELEGRAM</a></li>
+                            <li><a href="buylink" target="_blank">DEXTOOLS</a></li>
+                            <li><a href="dexlink" target="_blank">DEXSCREENER</a></li>
+
+                        </ul>
+                        <!--/ Menu (Horizontal) -->
+
+                    </div>
+
+                    <div class="c-col-3 sm-12">
+
+                        <!-- Text -->
+                        <div class="text-wrapper align-right">
+
+                            <p class="text-h6"></p>
+
+                        </div>
+                        <!--/ Text -->
+
+                    </div>
+
+                </div>
+                <!--/ Footer Bottom -->
+
+            </div>
+
+        </div>
+        <!--/ Footer -->
+
+
+    </div>
+    <!--/ Page -->
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/barba.min.js"></script>
+    <script src="js/gsap.js"></script>
+    <script src="js/scripts.js"></script>
+    <script>
+        $(document).ready(function () {
+            setTimeout(function () {
+                $('#bwobCaro').fadeIn('slow')
+            }, 1000)
+        })
+    </script>
+
+</body>
