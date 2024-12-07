@@ -1,788 +1,436 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
-
-    <!-- Page Title -->
-    <title>COLD</title>
-    <!--/ Page Title -->
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>$COLD</title>
+    <link rel="icon" type="image/png" href="assets/img/blue-hat.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
-
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-
-    <link href="css/plugins.css" rel="stylesheet">
-    <link href="style.css" rel="stylesheet">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- Favicons -->
-    <link rel="shortcut icon" href="img/bwob/bwobAv.png">
-    <link rel="apple-touch-icon" href="img/bwob/bwobAv.png">
-    <!--/ Favicons -->
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
-    <style>
-        .lilita-one-regular {
-            font-family: "Lilita One", sans-serif;
-            font-weight: 400;
-            font-style: normal;
-        }
-
-        .indie-flower-regular {
-            font-family: "Indie Flower", cursive;
-            font-weight: 400;
-            font-style: normal;
-        }
-
-
-        .cedarville-cursive-regular {
-            font-family: "Cedarville Cursive", cursive;
-            font-weight: 400;
-            font-style: normal;
-        }
-
-
-
-        #bwobTaxi {
-            position: absolute;
-            -webkit-animation: linear infinite;
-            -webkit-animation-name: run;
-            -webkit-animation-duration: 5s;
-        }
-
-        @-webkit-keyframes run {
-            0% {
-                left: 0;
-            }
-
-            48% {
-                -webkit-transform: rotateY(0deg);
-            }
-
-            50% {
-                left: calc(100% - 100px);
-                -webkit-transform: rotateY(180deg);
-            }
-
-            98% {
-                -webkit-transform: rotateY(180deg);
-            }
-
-            100% {
-                left: 0;
-                -webkit-transform: rotateY(0deg);
-            }
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Grandstander:ital,wght@0,100..900;1,100..900&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
-
-<body class="light" data-barba="wrapper">
-
-    <!-- Page Loader -->
-    <div class="page-loader blocks down">
-
-        <!-- Logo -->
-        <div class="page-loader-logo" style="margin-bottom:30px;">
-
-            <img src="img/bwob/bwobAv.png" />
-
+<body>
+    <audio id="background-music" src="assets/music/cappy.mp3" preload="auto"></audio>
+    <div id="blue">
+        <div class="custom-shape-divider-bottom-1730580219">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
+            </svg>
         </div>
-        <!-- Logo -->
-        <!-- Caption -->
-        <div class="page-loader-caption lilita-one-regular" style="margin-top:65px;">
-
-            WELCOME TO COLD WORLD
+    </div>
+    <div id="off-canvas">
+        <div class="col-9 col-md-6 mb-3">
+            <p class="nav-link mb-0 text-break">CA: <br>5XghEpWDB3jNi3iAPBWjyhhR5fZ7M5r5gD423cZFpump</p>
         </div>
-        <!-- Caption -->
-
-    </div>
-    <!--/ Page Loader -->
-
-    <!-- Page Transitions -->
-    <div class="nayla-page-transition block down capt-bottom-left offset-x">
-        <!-- Caption -->
-        <div class="page-transition-caption lilita-one-regular ">LOADING NEXT LAND...</div>
-        <!--/ Caption -->
-
-    </div>
-    <!-- Page Transitions -->
-
-    <!-- Mouse Cursor -->
-    <div id="mouseCursor" class="dot"> </div>
-    <!--/ Mouse Cursor -->
-
-    <!-- Page -->
-    <div id="page">
-
-        <div class="menu-overlay"></div>
-
-        <!-- Site Header -->
-        <div id="header" class="site-header fixed light blend">
-
-            <div class="header-wrapper wrapper-full">
-
-                <div class="c-col-4">
-
-                    <div class="nayla-button" data-icon="arrow_forward">
-
-                        <a href="https://x.com/coldsolana" target="_blank">X/TWITTER</a>
-
-                    </div>
-
-                </div>
-
-                <div class="c-col-4 align-center">
-
-                    <div class="nayla-button" data-icon="arrow_forward">
-                        <div style="text-align:right; margin-bottom: 10px;  margin-right: 10px;">
-                            <div id="play" style=" cursor:pointer; float:right">
-                                <img src="img/bwob/play.png" />
-                            </div>
-                            <div id="pause" style="display:none; cursor:pointer; float:right">
-                                <img src="img/bwob/pause.png" />
-                            </div>
-                        </div>
-
-
-                    </div>
-
-                </div>
-
-                <div class="c-col-4 align-right">
-
-                    <div class="nayla-button" data-icon="arrow_forward">
-
-                        <a href="https://t.me/coldsolanaportal" target="_blank">TELEGRAM </a>
-
-                    </div>
-                </div>
-
-
+        <div class="col-9 col-md-6">
+            <a href="buylink" target="_blank" class="button foot3r w-100">Buy Now!</a>
+        </div>
+        <div class="row">
+            <div class="col-4 pe-0">
+                <a href="dexlink" target="_blank" class="button foot3r w-100">
+                    <img src="assets/img/dexscanner.svg">
+                </a>
             </div>
-
-        </div>
-        <!--/ Site Header -->
-
-        <!-- Main -->
-        <main id="primary" class="site-main" data-barba="container">
-
-            <!-- Page Content -->
-            <div id="content" class="page-content">
-
-                <div class="section fullscreen light" style="padding-top: 75px">
-
-                    <div class="section-background">
-
-                        <!-- Video -->
-                        <div class="nayla-video n-vimeo no-interactions hide-desktop" data-controls="false"
-                            data-autoplay=true data-muted=true data-loop=true>
-
-                            <video playsinline autoplay muted loop class="n-video ">
-                                <source src="/cold-01-removebg-preview.png">
-                            </video>
-
-                        </div>
-                        <!--/ Video -->
-
-                        <!-- Video -->
-                        <div class="nayla-video n-vimeo no-interactions hide-mobile" data-controls="false"
-                            data-autoplay=true data-muted=true data-loop=true>
-
-
-
-                            <video autoplay muted loop class="n-video " style="height: 100%!important;">
-                                <source src="vid.mp4">
-                            </video>
-                        </div>
-                        <!--/ Video -->
-
-
-
-
-
-
-                    </div>
-                    <div class="wrapper-full blend">
-
-                        <div class="c-col-12">
-
-                            <!-- Text -->
-                            <div class="text-wrapper blend mobile-align-center">
-
-                                <p class="md-title has-anim-text charsLeft lilita-one-regular"
-                                    style="--mobileFontSize: 100px">COLD
-                                    <br />
-                                <div style="font-size:30px;letter-spacing:0;width:350px;display:none;"
-                                    class="indie-flower-regular">Pushed through fear; and found fortune</div>
-                                </p>
-
-                            </div>
-                            <!--/ Text -->
-
-                        </div>
-
-                        <div class="c-col-4 sm-12 align-bottom mobile-align-center blend mobile-padd" id="bwobCaro"
-                            style="display:none">
-
-
-                            <div class="project-button">
-
-                                <a href="#sec1">
-
-                                    <!-- Nayla Circular Text -->
-                                    <div class="nayla-circular-text counter-clockwise " data-height="200"
-                                        data-duration=13 data-seperator="circle" data-icon="arrow_downward">
-
-                                        <!-- Circle Text -->
-                                        <h3 class="circle-text">Buy,Believe,COLD</h3>
-
-                                    </div>
-                                    <!--/Nayla Circular Text -->
-
-
-                                </a>
-
-                            </div>
-                            <!--/ Project Button -->
-
-
-
-                        </div>
-
-                        <div class="c-col-8 sm-12 align-bottom">
-
-                            <!-- Text -->
-                            <div class="text-wrapper align-right blend mobile-align-center">
-
-                                <p class="md-title has-anim-text charsLeft" style="--mobileFontSize: 60px" data-delay=1>
-                                </p>
-
-                            </div>
-                            <!--/ Text -->
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <div class="section" id="sec1" style="padding-top: 50px">
-
-
-                    <div class="wrapper-full">
-
-                        <div class="c-col-12">
-
-                            <!-- Marquee -->
-                            <div class="nayla-marquee right-to-left" data-duration="13" data-seperator="remove">
-
-                                <p class="text-h1 lilita-one-regular"> $COLD </p>
-
-                            </div>
-                            <!--/ Marquee -->
-
-                        </div>
-
-                    </div>
-
-
-
-                    <div class="wrapper">
-
-                        <div class="c-col-3 sm-12">
-
-                            <!-- Text -->
-                            <div class="text-wrapper">
-
-                                <p class="text-h6">Hello <span class="text-h5">👋</span> <br>from <strong>$COLD</strong>
-                                </p>
-
-                            </div>
-                            <!--/ Text -->
-
-                        </div>
-
-                        <div class="c-col-6 sm-12">
-
-                            <!-- Text -->
-                            <div class="text-wrapper">
-
-                                <p class="text-h6"><strong>$COLD</strong> always had trouble belonging because it's too cold here. That’s until we realized that we could be go wherever we
-                                    wanted! so we could join anyone on our adventure in this winter and fill any role! COLD is for everyone
-                                    and is now spreading oue wisdom and fortune to all.
-                                    <br>
-
-                                </p>
-                                <p class="text-h6" style="word-break: break-all;"><strong>CA : </strong>5XghEpWDB3jNi3iAPBWjyhhR5fZ7M5r5gD423cZFpump
-                                    <br>
-
-                                </p>
-
-                            </div>
-                            <!--/ Text -->
-
-                            <!-- Empty Space -->
-                            <span class="empty-space" style="height: 75px"></span>
-                            <!--/ Empty Space -->
-
-                            <!-- Button -->
-                            <div class="nayla-button underline icon-right text-h6" data-icon="arrow_outward">
-
-                                <a href="chartlink">CHART $COLD</a>
-                                <a href="buylink">BUY $COLD</a>
-
-                            </div>
-                            <!--/ Button -->
-
-                            <!-- Empty Space -->
-                            <span class="empty-space" style="height: 15px"></span>
-                            <!--/ Empty Space -->
-
-                            <!-- Single Image -->
-                            <div class="single-image hide-mobile" style="margin-bottom:240px">
-
-                                <img id="bwobTaxi" alt="Single Image" style="width:50%" src="img/bwob/bwobTaxiT.png">
-
-                            </div>
-
-                            <div class="single-image hide-desktop" style="margin-bottom:240px">
-
-                                <img id="bwobTaxi" alt="Single Image" style="width:70%" src="img/bwob/bwobTaxiT.png">
-
-                            </div>
-                            <!--/ Single Image -->
-
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="wrapper-full no-margin">
-
-                        <div class="c-col-12">
-
-                            <!-- Text -->
-                            <div class="text-wrapper">
-
-                                <p class="text-h1 has-anim-text wordsJustifyExpand"
-                                    style="text-align:center; margin-bottom:0; margin-top:10px" data-scrub=true>
-                                    🟦
-                                    <a href="https://x.com/coldsolana" target="_blank">
-                                        <i class="fa-brands fa-twitter"></i>
-                                    </a>
-                                    <a href="dexlink" target="_blank">
-                                        <img src="/dexscreener-b.png" style="max-width: 90px;" alt="" srcset="">
-                                    </a>
-                                    <a href="https://t.me/coldsolanaportal" target="_blank">
-                                        <i class="fa-brands fa-telegram"></i>
-                                    </a>
-
-                                    🟦
-                                </p>
-
-                            </div>
-                            <!--/ Text -->
-
-                        </div>
-
-                    </div>
-
-
-
-                </div>
-
-
-
-                <div id="animPin" class="section fullscreen">
-
-                    <div class="section-background">
-
-
-                        <div class="single-image hide-mobile">
-
-                            <img alt="Single Image" src="/img (1).png">
-
-                        </div>
-
-                        <div class="single-image hide-desktop" style="--mobileHeight:unset!important;">
-
-                            <img alt="Single Image " style="--mobileHeight:unset!important;" src="/">
-
-                        </div>
-                    </div>
-
-                    <div class="wrapper">
-
-                        <div class="c-col-9 sm-12 col-center self-center" style="text-align: center;">
-
-
-                            <!-- Text -->
-                            <div class="text-wrapper align-center">
-
-                                <p class="text-h4 charsFadeOn has-anim-text mask lilita-one-regular" data-pin=true
-                                    data-trigger="#animPin" style="color: #fff; font-size:40px">
-                                    $COLD <br />IS THE </br><span style="color:#ff3a09">COLDEST</span><br /><span style="color:#ff3a09">COIN ON</span><br />
-                                    <span style="color:#ff3a09"> SOLANA</span>
-                                   
-                                    <img alt="Single Image" class="hide-desktop"
-                                        style="width:30%; opacity:.6; margin:0 auto;" src="img/bwob/scrolld2.gif" />
-                                    <img alt="Single Image" class="hide-mobile" style="width:10%; opacity:.6;"
-                                        src="img/bwob/scrolld2.gif" />
-                                </p>
-
-
-
-                            </div>
-                            <!--/ Text -->
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-                <!-- Main -->
-                <div id="primarydos" class="site-main project-page dark" data-barba="container"
-                    data-barba-namespace="project-image-gallery-horizontal">
-
-
-                    <!-- Project Header -->
-                    <div class="project-page-header fullscreen image-gallery horizontal light"
-                        style="background: #191919">
-
-                        <div class="wrapper">
-
-                            <!-- Project Hero -->
-                            <div class="project-hero">
-
-                                <!-- Project Title -->
-                                <div class="project-title">
-
-                                    <h1 class="md-title has-anim-text wordsUp no-revert lilita-one-regular"
-                                        style="font-size:65px;" data-stagger=0.1>
-                                        <span style="color:#1b91f4">$</span>COLD &nbsp;<br />ARTWORK
-                                        <br><span style="font-size:45px;">🎨 🖼️ 🖌️</span>
-                                    </h1>
-
-                                </div>
-                                <!--/Project Title -->
-
-                                <!-- Project Category -->
-                                <div class=" text-h6 has-anim-text wordsUp"
-                                    style="opacity: 1 !important; font-style:italic">(Original Artwork by Artist)</div>
-                                <!--/Project Cateogry -->
-
-                                <!-- Project Meta -->
-                                <div class="project-meta">
-
-                                    <!-- Text Wrapper -->
-                                    <div class="text-wrapper">
-
-                                        <p class="has-anim-text linesUp" style="opacity: 1 !important;"></p>
-
-                                    </div>
-                                    <!--/Text Wrapper -->
-
-                                    <!-- Text Wrapper -->
-                                    <div class="text-wrapper">
-
-                                        <p class="has-anim-text linesUp" style="opacity: 1 !important;"> </p>
-
-                                    </div>
-                                    <!--/Text Wrapper -->
-
-                                </div>
-                                <!--/Project Meta -->
-
-                                <!-- Project Slide Button -->
-                                <img alt="Single Image" class="hide-mobile" style="width:20%; opacity:.6"
-                                    src="img/bwob/scrolld2.gif" />
-                                <img alt="Single Image" class="hide-desktop"
-                                    style="width:60%; opacity:.6; position:absolute; bottom:0"
-                                    src="img/bwob/scrolld2.gif" />
-
-                                <div class="project-slide-button has-anim fadeRight">
-
-                                    <span class="material-icons" style="opacity: 1 !important;">
-
-                                    </span>
-
-                                </div>
-                                <!--/Project Slide Button -->
-
-                            </div>
-                            <!--/Project Hero -->
-
-                            <!-- Project Images -->
-                            <div class="project-images cursor-text" data-cursor-text="SCROLL" data-speed="15">
-
-                                <!-- Project Images Slider -->
-                                <div class="project-images-slider">
-
-                                    <!-- Project Image -->
-                                    <div class="project-image featured">
-
-                                        <img src="/img (1).jpg" alt="Bullish">
-
-                                    </div>
-                                    <!--/Project Image -->
-
-                                    <!-- Project Image -->
-                                    <div class="project-image">
-
-                                        <img src="/img (1).png" alt="Goku + COLD">
-
-                                    </div>
-                                    <!--/Project Image -->
-
-                                    <!-- Project Image -->
-                                    <div class="project-image">
-
-                                        <img src="/img (2).jpg" alt="Mooning">
-
-                                    </div>
-                                    <!--/Project Image -->
-
-                                    <!-- Project Image -->
-                                    <div class="project-image">
-
-                                        <img src="/img (3).jpg" alt="COLD TREE">
-
-                                    </div>
-                                    <!--/Project Image -->
-
-                                    <!-- Project Image -->
-                                    <div class="project-image">
-
-                                        <img src="/img (4).jpg" alt="Piccolo + COLD">
-
-                                    </div>
-                                    <!--/Project Image -->
-
-                                    <!-- Project Image -->
-                                    <div class="project-image">
-
-                                        <img src="/img (5).jpg" alt="COLD hunting">
-
-                                    </div>
-                                    <!--/Project Image -->
-
-                                    <!-- Project Image -->
-                                    <div class="project-image">
-
-                                        <img src="/img (6).jpg" alt="Many BWOB">
-
-                                    </div>
-                                    <!--/Project Image -->
-
-                                    <!-- Project Image -->
-                                    <div class="project-image">
-
-                                        <img src="/img (7).jpg" alt="Jr + COLD">
-
-                                    </div>
-                                    <!--/Project Image -->
-
-                                    <div class="project-image">
-
-                                        <img src="/img (8).jpg" alt="COLD SHOPS">
-
-                                    </div>
-                                    <!--/Project Image -->
-<!-- 
-                                    <div class="project-image">
-
-                                        <img src="img/bwob/bwobOp.jpg" alt="COLD ON ONE PIECE">
-
-                                    </div> -->
-                                    <!--/Project Image -->
-<!-- 
-                                    <div class="project-image">
-
-                                        <img src="img/bwob/bwobCave.jpg" alt="COLD Mines">
-
-                                    </div> -->
-                                    <!--/Project Image -->
-
-
-                                </div>
-                                <!--/Project Image Slider -->
-
-                            </div>
-                            <!--/Project Images -->
-
-                        </div>
-
-                    </div>
-
-
-                </div>
-
-
-
-                <!--/ Page Content -->
-
-        </main>
-        <!--/ Main  -->
-
-
-        <!-- Footer -->
-        <div id="footer" class="site-footer">
-
-            <div class="footer-wrapper">
-
-                <!-- Footer Top -->
-                <div class="wrapper footer-top-wrapper">
-
-                    <div class="c-col-3 sm-12">
-
-                        <!-- Text -->
-                        <div class="text-wrapper">
-
-                            <p class="text-h6">Join the community &
-                                <br>build with <Strong>COLD</Strong>.
-                            </p>
-
-                        </div>
-                        <!--/ Text -->
-
-                    </div>
-
-                    <!-- Empty Column (For spacing) -->
-                    <div class="c-col-3 hide-mobile"></div>
-                    <!--/ Empty Column (For spacing) -->
-
-                    <div class="c-col-3 sm-12">
-
-                        <!-- Text -->
-                        <div class="text-wrapper">
-
-                            <p class="text-h6">Get latest updates and <span style="font-style: italic;">vibe</span> with
-                                us in TG.
-                            </p>
-
-                        </div>
-                        <!--/ Text -->
-
-                    </div>
-
-                    <div class="c-col-6 sm-12">
-
-                        <!-- Empty Space -->
-                        <span class="empty-space hide-mobile" style="height: 35px"></span>
-                        <!--/ Empty Space -->
-
-                        <!-- Button -->
-                        <div class="nayla-button underline icon-right justify-text text-h1" data-icon="arrow_outward">
-
-                            <a href="dexlink" target="_blank" class="lilita-one-regular">BUY<span
-                                    style="color:#1e94f3">$COLD'IN</span></a>
-
-                        </div>
-                        <!--/ Button -->
-
-
-                    </div>
-                    <div class="c-col-6 sm-12">
-
-                        <!-- Empty Space -->
-                        <span class="empty-space hide-mobile" style="height: 35px"></span>
-                        <!--/ Empty Space -->
-
-                        <!-- Button -->
-                        <!-- Image -->
-                        <div class="single-project-image" style="text-align:center">
-                            <img alt="Single Image" class="hide-mobile" style="width:45%" src="img/bwob/bwobAv.png">
-                            <img alt="Single Image" class="hide-desktop" style="width:65%" src="img/bwob/bwobAv.png">
-                        </div>
-                        <!--/ Image -->
-                        <!--/ Button -->
-
-                    </div>
-
-
-
-                </div>
-
-                <!-- Footer Bottom -->
-                <div class="wrapper footer-bottom-wrapper">
-
-                    <div class="c-col-3">
-                        <span
-                            style="font-size:28px; color:#5e5e5e; font-style: italic;"><strong>5XghEpWDB3jNi3iAPBWjyhhR5fZ7M5r5gD423cZFpump</strong></span>
-                            <br /><br /><br /><br /><br /><br />
-                        <!-- Text -->
-                        <div class="text-wrapper">
-
-                            <p class="text-h6">© 2024 </p>
-
-                        </div>
-                        <!--/ Text -->
-
-                    </div>
-
-                    <div class="c-col-6 sm-12">
-
-                        <!-- Menu (Horizontal) -->
-                        <ul class="menu horizontal text-h6">
-
-                            <li><a href="https://x.com/coldsolana" target="_blank">TWITTER</a></li>
-                            <li><a href="https://t.me/coldsolanaportal" target="_blank">TELEGRAM</a></li>
-                            <li><a href="buylink" target="_blank">DEXTOOLS</a></li>
-                            <li><a href="dexlink" target="_blank">DEXSCREENER</a></li>
-
-                        </ul>
-                        <!--/ Menu (Horizontal) -->
-
-                    </div>
-
-                    <div class="c-col-3 sm-12">
-
-                        <!-- Text -->
-                        <div class="text-wrapper align-right">
-
-                            <p class="text-h6"></p>
-
-                        </div>
-                        <!--/ Text -->
-
-                    </div>
-
-                </div>
-                <!--/ Footer Bottom -->
-
+            <div class="col-4 px-2">
+                <a href="https://x.com/coldsolana" target="_blank" class="button foot3r w-100">
+                    <img src="assets/img/x.svg">
+                </a>
             </div>
-
+            <div class="col-4 ps-0">
+                <a href="https://t.me/coldsolanaportal" target="_blank" class="button foot3r w-100">
+                    <img src="assets/img/telegram.svg">
+                </a>
+            </div>
         </div>
-        <!--/ Footer -->
-
-
     </div>
-    <!--/ Page -->
+    <div class="container">
+        <div class="row justify-content-between align-items-center" id="navbar">
+            <div class="col-auto d-block d-lg-none">
+                <a href="/">$COLD</a>
+            </div>
+            <div class="col-auto d-none d-lg-block">
+                <a href="buylink"  target="_blank"class="nav-link button left-radius">Buy now</a>
+                <a href="dexlink" target="_blank" class="nav-link button">
+                    <img src="assets/img/dexscanner.svg">
+                </a>
+            </div>
+            <div class="col-auto col-lg-5 col-xl-auto d-none d-lg-block">
+                <p class="nav-link mb-0 text-break">5XghEpWDB3jNi3iAPBWjyhhR5fZ7M5r5gD423cZFpump</p>
+            </div>
+            <div class="col-auto d-none d-lg-block">
+                <a href="https://t.me/coldsolanaportal" target="_blank" class="nav-link button">
+                    <img src="assets/img/telegram.svg">
+                </a>
+                <a href="https://x.com/coldsolana" target="_blank" class="nav-link button right-radius">
+                    <img src="assets/img/x.svg">
+                </a>
+            </div>
+            <div class="col-auto d-block d-lg-none toggle">
+				<a href="#" id="toggle-btn" class="my-btn">
+					<svg id="hamburger-icon" width="26px" height="26px" clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m21 15.75c0-.414-.336-.75-.75-.75h-16.5c-.414 0-.75.336-.75.75s.336.75.75.75h16.5c.414 0 .75-.336.75-.75zm0-4c0-.414-.336-.75-.75-.75h-16.5c-.414 0-.75.336-.75.75s.336.75.75.75h16.5c.414 0 .75-.336.75-.75zm0-4c0-.414-.336-.75-.75-.75h-16.5c-.414 0-.75.336-.75.75s.336.75.75.75h16.5c.414 0 .75-.336.75-.75z" fill-rule="nonzero"/></svg>
+					<svg id="close-icon" width="26px" height="26px" clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m12 10.93 5.719-5.72c.146-.146.339-.219.531-.219.404 0 .75.324.75.749 0 .193-.073.385-.219.532l-5.72 5.719 5.719 5.719c.147.147.22.339.22.531 0 .427-.349.75-.75.75-.192 0-.385-.073-.531-.219l-5.719-5.719-5.719 5.719c-.146.146-.339.219-.531.219-.401 0-.75-.323-.75-.75 0-.192.073-.384.22-.531l5.719-5.719-5.72-5.719c-.146-.147-.219-.339-.219-.532 0-.425.346-.749.75-.749.192 0 .385.073.531.219z"/></svg>
+				</a>
+			</div>
+        </div>
+        <div class="row justify-content-center text-center">
+            <div class="col-2 player">
+                <p class="mb-1">Play me!</p>
+                <button id="play-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" id="svgPlay"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                </button>
+                <button id="pause-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#2E2C2F" stroke="#2E2C2F" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="4" width="2" height="16"></rect><rect x="14" y="4" width="2" height="16"></rect></svg>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid" style="height: 85vh;">
+        <div class="row h-100 justify-content-center align-items-center overf">
+            <div class="col-auto">
+                <div id="header-container">
+                    <div id="sign">
+                        <img src="assets/img/cap-sign.jpg" class="img-fluid rounded">
+                    </div>
+                    <div id="capy-box">
+                        <img src="assets/img/blue-hat.png" class="img-fluid" id="clickMeHeaderImage">
+                    </div>
+                    <div id="capy-box-btn">
+                        <button id="clickMeHeader">Click<br>Here</button>
+                    </div>
+                    <div class="left-bubbles">
+                        <div class="lb"></div>
+                        <div class="lb"></div>
+                        <div class="lb"></div>
+                    </div>
+                    <div class="right-bubbles">
+                        <div class="rb"></div>
+                        <div class="rb"></div>
+                        <div class="rb"></div>
+                        <div class="rb"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container pb-1 pb-lg-5 mb-1 mb-lg-5">
+        <div class="row text-center justify-content-center">
+            <div class="col-9 col-md-12 position-relative">
+                <h2 style="position: relative; z-index: 10;">$COLD always had trouble belonging because it's too cold here. That’s until we realized that we could be go wherever we wanted! so we could join anyone on our adventure in this winter and fill any role! COLD is for everyone and is now spreading oue wisdom and fortune to all.<br class="d-none d-md-block"></h2>
+                <div class="right-bubbles light">
+                    <div class="lb light"></div>
+                    <div class="lb light"></div>
+                </div>
+                <div class="left-bubbles light">
+                    <div class="rb light"></div>
+                    <div class="rb light"></div>
+                    <div class="rb light"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid position-relative pt-5" style="display: none;">
+        <div class="row justify-content-center justify-content-lg-start" id="season-text">
+            <div class="col-10 col-md-6 col-lg-5 text-center ps-1 ps-lg-5">
+                <h1>Season 1:</h1>
+                <h3>The Chronicles of Cap</h3>
+                <p class="text">Cap puts it all on the line to get out of the trenches, will he retire his bloodline or gamble it all away?</p>
+            </div>
+        </div>
+        <div class="row align-items-center align-items-lg-end justify-content-center justify-content-lg-end">
+            <div class="col-2 d-none d-lg-block">
+                <div class="episode-card ep-1" id="epPlaceholder1Card"></div>
+                <div class="row justify-content-center">
+                    <div class="col-6">
+                        <div class="episode-info" id="epPlaceholder1">ep. 1</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-2 d-none d-lg-block">
+                <div class="episode-card ep-2" id="epPlaceholder2Card"></div>
+                <div class="row justify-content-center">
+                    <div class="col-6">
+                        <div class="episode-info" id="epPlaceholder2">ep. 2</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-11 col-md-7 col-lg-6 col-xl-4">
+                <div class="episode-card big">
+                    <button class="play-container" id="customPlayButton">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" id="playIcon"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                    </button>
+                    <video poster="assets/img/episode-1.jpg" id="mainVideoBig">
+                        <source src="assets/video/episode-1.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-auto">
+                        <div class="episode-info" id="epPlaceholder3">ep. 1</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-2 d-none d-lg-block">
+                <div class="episode-card ep-3"  id="epPlaceholder4Card"></div>
+                <div class="row justify-content-center">
+                    <div class="col-6">
+                        <div class="episode-info" id="epPlaceholder4">ep. 2</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-2 d-none d-lg-block">
+                <div class="episode-card ep-4" id="epPlaceholder5Card"></div>
+                <div class="row justify-content-center">
+                    <div class="col-6">
+                        <div class="episode-info" id="epPlaceholder5">ep. 3</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center mt-3 mt-md-5">
+            <div class="col-auto">
+                <button class="slide" id="slidePrevious">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#2E2C2F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+                </button>
+                <button class="slide" id="slideNext">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#2E2C2F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+                </button>
+            </div>
+        </div>
+        <div class="row justify-content-center justify-content-lg-end text-center">
+            <div class="col-12 col-lg-3 py-5 py-lg-1">
+                <h1>Season 2</h1>
+                <p class="text">Comming soon...</p>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid" id="capy-background">
+        <div class="row justify-content-center">
+            <div class="col-auto">
+                <div class="meditation-capy">
+                    <div class="sun">
+                        <img src="assets/img/blue-hat.png" class="img-fluid">
+                    </div>
+                    <img src="assets/img/txt.png" class="warped-text">
+                </div>
+            </div>
+        </div>
+    </div>
+<section id="background-shift">
+    <div class="container-fluid" id="letter-container">
+        <div class="cap-position">
+            <div class="cap-container">
+                <div class="cap-background">
+                    <img src="assets/img/blue-hat.png">
+                </div>
+                <a href="buylink" target="_blank" id="buy-now">Buy Now!</a>
+            </div>
+        </div>
+        <div class="row" id="capyRow1">
+            <div class="col-12">
+                <p class="xl-text">$COLD $COLD $COLD $COLD $COLD $COLD $COLD $COLD $COLD $COLD </p>
+            </div>
+        </div>
+        <div class="row" id="capyRow2">
+            <div class="col-12">
+                <p class="xl-text">$COLD $COLD $COLD $COLD $COLD $COLD $COLD $COLD $COLD $COLD </p>
+            </div>
+        </div>
+        <div class="row" id="capyRow3">
+            <div class="col-12">
+                <p class="xl-text">$COLD $COLD $COLD $COLD $COLD $COLD $COLD $COLD $COLD $COLD </p>
+            </div>
+        </div>
+        <div class="row d-lg-none" id="capyRow4">
+            <div class="col-12">
+                <p class="xl-text">$COLD $COLD $COLD $COLD $COLD $COLD $COLD $COLD $COLD $COLD </p>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid position-relative">
+        <div class="row justify-content-center text-center">
+            <div class="col-11 col-md-6 col-lg-8 col-xl-5">
+                <h2 style="color: #381718;" id="changeBGanchor">$
+                    C
+                    O
+                    L
+                    D
 
-    <script src="js/jquery.min.js"></script>
-    <script src="js/plugins.js"></script>
-    <script src="js/barba.min.js"></script>
-    <script src="js/gsap.js"></script>
-    <script src="js/scripts.js"></script>
-    <script>
-        $(document).ready(function () {
-            setTimeout(function () {
-                $('#bwobCaro').fadeIn('slow')
-            }, 1000)
-        })
-    </script>
+                    I
+                    S
+                     
+                    T
+                    H
+                    E
+                    C
+                    O
+                    L
+                    D
+                    E
+                    S
+                    T
+                    C
+                    O
+                    I
+                    N
+                     
+                    O
+                    N
+                    S
+                    O
+                    L
+                    A
+                    N
+                    A<br>
+                
+                </h2>
+                <p class="text" style="color: #381718;">Come chill with our cold community in our <a href="https://t.me/coldsolanaportal" target="_blank"> Telegram</a>.</p>
+            </div>
+        </div>
+        <div class="container-fluid py-5 px-0 px-md-3">
+            <div class="row justify-content-center">
+                <div class="col-6 col-md-3 gallery-pt" id="leftgallery">
+                    <div class="img-container">
+                        <picture>
+                            <source srcset="assets/img/img (1).jpg" type="image/webp">
+                            <img src="assets/img/img (1).jpg" alt="Big brain Cappy!">
+                        </picture>
+                    </div>
+                    <div class="img-container">
+                        <picture>
+                            <source srcset="assets/img/img (2).jpg" type="image/webp">
+                            <img src="assets/img/img (2).jpg" alt="Cap Fire World">
+                        </picture>
+                    </div>
+                    <div class="img-container">
+                        <picture>
+                            <source srcset="assets/img/img (3).jpg" type="image/webp">
+                            <img src="assets/img/img (3).jpg" alt="Cappy Skydiving!">
+                        </picture>
+                    </div>
+                    <div class="img-container">
+                        <picture>
+                            <source srcset="assets/img/img (4).jpg" type="image/webp">
+                            <img src="assets/img/img (4).jpg" alt="Cappy in bed with gf">
+                        </picture>
+                    </div>
+                    <div class="img-container">
+                        <picture>
+                            <source srcset="assets/img/img (5).jpg" type="image/webp">
+                            <img src="assets/img/img (5).jpg" alt="Cappy diving into gold.">
+                        </picture>
+                    </div>
+                    <!-- <div class="img-container">
+                        <picture>
+                            <source srcset="assets/img/img (6).jpg" type="image/webp">
+                            <img src="assets/img/img (6).jpg" alt="Exploding Green Candles Cappy!">
+                        </picture>
+                    </div>
+                    <div class="img-container">
+                        <picture>
+                            <source srcset="assets/img/img (8).jpg" type="image/webp">
+                            <img src="assets/img/img (8).jpg" alt="Trick o' treat Cappy">
+                        </picture>
+                    </div> -->
+                </div>
+                <div class="col-4 col-md-5 col-xl-4 d-none d-md-block" style="padding-top: 50px">
+                    <div class="video-container">
+                        <picture>
+                            <source srcset="assets/img/cold-01a.jpg" type="image/webp">
+                            <img src="assets/img/cold-01a.jpg" style="max-height: 105vh;" alt="Candle teeth Cappy.">
+                        </picture>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3 gallery-pt" id="rightgallery">
+                    <div class="img-container">
+                        <picture>
+                            <source srcset="assets/img/img9.png" type="image/webp">
+                            <img src="assets/img/img9.png" alt="Candle teeth Cappy.">
+                        </picture>
+                    </div>
+                    <div class="img-container">
+                        <picture>
+                            <source srcset="assets/img/img (8).jpg" type="image/webp">
+                            <img src="assets/img/img (8).jpg" alt="Cappy vs Cappy.">
+                        </picture>
+                    </div>
+                    <div class="img-container">
+                        <picture>
+                            <source srcset="assets/img/img (7).jpg" type="image/webp">
+                            <img src="assets/img/img (7).jpg" alt="SUI bags">
+                        </picture>
+                    </div>
+                    <div class="img-container">
+                        <picture>
+                            <source srcset="assets/img/img (6).jpg" type="image/webp">
+                            <img src="assets/img/img (6).jpg" alt="Meditation Cappy.">
+                        </picture>
+                    </div>
+                    <div class="img-container">
+                        <picture>
+                            <source srcset="assets/img/img (1).png" type="image/webp">
+                            <img src="assets/img/img (1).png" alt="Cappy the nerd.">
+                        </picture>
+                    </div>
+                    <!-- <div class="img-container">
+                        <picture>
+                            <source srcset="assets/img/art-13.webp" type="image/webp">
+                            <img src="assets/img/art-13-fallback.jpg" alt="Rio de Capero.">
+                        </picture>
+                    </div>
+                    <div class="img-container">
+                        <picture>
+                            <source srcset="assets/img/art-14.webp" type="image/webp">
+                            <img src="assets/img/art-14-fallback.jpg" alt="SUI x Cappy">
+                        </picture>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+        <!-- <div class="row">
+            <div id="divider"></div>
+        </div> -->
+        <div class="row justify-content-center" id="foot3r-padding">
+            <div class="col-8 col-md-5 col-lg-4 col-xl-3">
+                <div class="row position-relative">
+                    <div class="col-12">
+                        <a href="buylink" target="_blank" class="button foot3r w-100">Buy Now!</a>
+                    </div>
+                    <div class="col-12 position-relative">
+                        <button class="button foot3r w-100" id="copyCa">Copy CA</button>
+                        <div id="copied">Copied!</div>
+                    </div>
+                    <div class="col-4 pe-0">
+                        <a href="dexlink" target="_blank" class="button foot3r w-100">
+                            <img src="assets/img/dexscanner.svg">
+                        </a>
+                    </div>
+                    <div class="col-4 px-2">
+                        <a href="https://x.com/coldsolana" target="_blank" class="button foot3r w-100">
+                            <img src="assets/img/x.svg">
+                        </a>
+                    </div>
+                    <div class="col-4 ps-0">
+                        <a href="https://t.me/coldsolanaportal" target="_blank" class="button foot3r w-100">
+                            <img src="assets/img/telegram.svg">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid text-center footer">
+        <div class="row">
+            <div class="col-12">
+                <img src="assets/img/blue-hat.png" class="img-fluid" id="footer-img">
+            </div>
+        </div>
+		<small>2024 $COLD. All rights reserved.</small>
+    </div>
+</section>
+    
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="assets/js/main.js"></script>
 </body>
+</html>
