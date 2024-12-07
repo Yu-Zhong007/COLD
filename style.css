@@ -12288,7 +12288,9 @@ span.test-prev::after {
 
 /** Tablets
 ------------------------------ */
-@media (min-width: 450px) and (max-width: 900px) {}
+@media (min-width: 450px) and (max-width: 900px) {
+    
+}
 
 
 
